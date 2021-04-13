@@ -31,5 +31,6 @@ namespace TwentyFour.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        //get comment by post id
     }
 }
