@@ -27,10 +27,6 @@ namespace TwentyFour.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        public DbSet<Post> Posts { get; set; }
-        public DbSet<Comment> Comments { get; set; }
-        public DbSet<Reply> Replies { get; set; }
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
