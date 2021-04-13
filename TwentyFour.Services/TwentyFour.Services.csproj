@@ -54,11 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentService.cs" />
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TwentyFour.Data\TwentyFour.Data.csproj">
+      <Project>{fed1147c-d460-4079-a53c-7cfe20a2291c}</Project>
+      <Name>TwentyFour.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwentyFour.Models\TwentyFour.Models.csproj">
+      <Project>{589ebc77-dc42-4d69-8b86-dff8143a2369}</Project>
+      <Name>TwentyFour.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetCommentReplies.cs" />
+    <Compile Include="GetPost.cs" />
+    <Compile Include="GetPostComment.cs" />
+    <Compile Include="PostACommentOnAPost.cs" />
+    <Compile Include="PostAPost.cs" />
+    <Compile Include="PostAReplyToAComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
