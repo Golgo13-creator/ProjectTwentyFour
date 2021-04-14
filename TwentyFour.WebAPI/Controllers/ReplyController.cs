@@ -29,7 +29,7 @@ namespace TwentyFour.WebAPI.Controllers
             return Ok();
         }
         //get replies by comment id controller
-        public IHttpActionResult Get(int id)
+        public IHttpActionResult Get(GetCommentReplies id)
         {
             ReplyService replyService = CreateReplyService();
             var posts = replyService.GetComment();
