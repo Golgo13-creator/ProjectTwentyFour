@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TwentyFour.Models;
+using TwentyFour.Services;
 
 namespace TwentyFour.WebAPI.Controllers
 {
@@ -16,12 +19,12 @@ namespace TwentyFour.WebAPI.Controllers
             var postService = new PostService(userId);
             return postService;
         }
-        public IHttpActionResult Post(PostCreate post)
+        public IHttpActionResult Post(PostAPost model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var service = CreatePostService();
-            if (!service.CreatePost(post))
+            if (!service.CreatePost(model))
                 return InternalServerError();
             return Ok();
         }
