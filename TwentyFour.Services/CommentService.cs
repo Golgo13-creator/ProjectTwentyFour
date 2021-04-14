@@ -32,5 +32,21 @@ namespace TwentyFour.Services
             }
         }
         //get comment by post id
+        public IEnumerable<GetPostComment> GetPosts()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Posts
+                        .Where(e => e.AuthorId == _userId)
+                        .Select(E => new GetPostComment
+                        {
+                            Id = E.PostId,
+                            Text = E.Text
+                        });
+                return query.ToArray();
+            }
+        }
     }
 }

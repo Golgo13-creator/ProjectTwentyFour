@@ -29,11 +29,11 @@ namespace TwentyFour.WebAPI.Controllers
             return Ok();
         }
         //get comment by post ID controller
-        //public IHttpActionResult Get(int id)
-        //{
-        //    CommentService commentService = CreateCommentService();
-        //    var posts = commentService.GetComment();
-        //    return Ok(posts);
-        //}
+        public IHttpActionResult Get(GetPostComment id)
+        {
+            CommentService commentService = CreateCommentService();
+            var posts = commentService.GetPosts();
+            return Ok(posts);
+        }
     }
 }
